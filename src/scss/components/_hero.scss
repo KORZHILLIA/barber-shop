@@ -1,0 +1,31 @@
+.hero {
+  position: relative;
+  background-image: url('../../images/mobile/hero/Slider-img-3.jpg');
+  background-repeat: no-repeat;
+  padding-top: 208px;
+  padding-bottom: 183px;
+}
+
+.hero__container {
+  padding-right: 143px;
+}
+
+.preheader--dark {
+  color: $color-font-gray;
+}
+
+.preheader--dark::before {
+  background-color: $color-font-gray;
+}
+
+.header-main {
+  font-family: $font-support;
+  @include font(48px, 1.17, 0.5em);
+  color: $color-white-main;
+  margin-bottom: 20px;
+}
+
+.hero__text {
+    color: $color-font-gray;
+    @include font(16px, 1.63, 0.02em);
+}

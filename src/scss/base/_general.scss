@@ -1,0 +1,57 @@
+body {
+  font-family: $font-main;
+  font-weight: 600;
+}
+
+.container {
+  width: 480px;
+  margin: 0 auto;
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flexy {
+  display: flex;
+}
+
+.btn {
+  display: block;
+  min-width: 160px;
+  max-width: 194px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid $color-orange-main;
+  background-color: transparent;
+}
+
+.btn--light {
+  color: inherit;
+}
+
+.preheader {
+    @include font(11px, 1.36, 0.1em);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.preheader--dark::before,
+.preheader--light::before {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 60px;
+    margin-right: 20px;
+}
