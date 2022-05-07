@@ -4,10 +4,14 @@ body {
 }
 
 .container {
-  width: 480px;
-  margin: 0 auto;
-  padding-left: 31px;
-  padding-right: 31px;
+  width: 100%;
+  
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    margin: 0 auto;
+    padding-left: 31px;
+    padding-right: 31px;    
+  }
 }
 
 ul {
@@ -21,11 +25,22 @@ a {
     color: inherit;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
 .flexy {
   display: flex;
 }
 
 .btn {
+  font-family: inherit;
   display: block;
   min-width: 160px;
   max-width: 194px;
@@ -45,6 +60,11 @@ a {
     @include font(11px, 1.36, 0.1em);
     text-transform: uppercase;
     margin-bottom: 20px;
+    font-weight: inherit;
+}
+
+.preheader--dark {
+    color: $color-font-preheader;
 }
 
 .preheader--dark::before,
@@ -54,4 +74,8 @@ a {
     height: 1px;
     width: 60px;
     margin-right: 20px;
+}
+
+.preheader--dark::before {
+  background-color: $color-font-gray;
 }

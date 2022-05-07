@@ -1,7 +1,12 @@
 .hero {
   position: relative;
-  background-image: url('../../images/mobile/hero/Slider-img-3.jpg');
+  background-image: linear-gradient(
+      to top,
+      $color-gradient-hero,
+      $color-gradient-hero
+    ), url('../images/mobile/hero/slider-3.jpg');
   background-repeat: no-repeat;
+  background-size: auto auto;
   padding-top: 208px;
   padding-bottom: 183px;
 }
@@ -10,17 +15,9 @@
   padding-right: 143px;
 }
 
-.preheader--dark {
-  color: $color-font-gray;
-}
-
-.preheader--dark::before {
-  background-color: $color-font-gray;
-}
-
 .header-main {
   font-family: $font-support;
-  @include font(48px, 1.17, 0.5em);
+  @include font(48px, 1.17, 0.05em);
   color: $color-white-main;
   margin-bottom: 20px;
 }
@@ -28,4 +25,5 @@
 .hero__text {
     color: $color-font-gray;
     @include font(16px, 1.63, 0.02em);
+    font-weight: 400;
 }

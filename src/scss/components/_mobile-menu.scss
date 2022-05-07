@@ -1,0 +1,80 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(0);
+  background-color: $color-white-main;
+  padding: 118px 103px 227px 40px;
+  padding-left: 39px;
+  color: $color-dark-main;
+  @include font(18px, 1.39, 0.1em);
+  transition: transform $transition;
+}
+
+.mobile-menu.hidden {
+  transform: translateX(100%);
+}
+
+.mobile-menu__close {
+    position: absolute;
+    top: 48px;
+    right: 31px;
+}
+
+.mobile-menu__navigation {
+  margin-bottom: 64px;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.navigation__item:hover {
+  color: $color-orange-main;
+}
+
+.mobile-menu__contacts {
+  margin-bottom: 64px;
+}
+
+.contacts__tel {
+    display: inline-block;
+  margin-bottom: 24px;
+}
+
+.menu__btn {
+    width: 194px;
+    @include font(12px, 1.33, 0.09em);
+    font-weight: inherit;
+    text-transform: uppercase;
+}
+
+.socials__item {
+    align-items: center;
+}
+
+.socials__item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.socials__link {
+    color: inherit;
+    @include font(14px, 1.36, 0.2em);
+}
+
+
+.socials__item::before {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 60px;
+    background-color: $color-dark-main;
+    margin-right: 40px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $transition;
+}
+
+.socials__item:hover::before {
+    transform: scaleX(100%);
+}

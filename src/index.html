@@ -8,15 +8,37 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./scss/main.css" rel="stylesheet" />
     <title>Barber Shop</title>
   </head>
   <body>
-    <header class="header container">
+    <header class="header container flexy">
       <svg class="header__logo" width="69" height="55">
         <use href="./images/svgs/symbol-defs.svg#icon-logo"></use>
       </svg>
-      <div class="header__mobile-menu hidden">
+      <svg class="header__menu-btn" id="burger" width="40" height="40">
+        <use
+          class="mobile-menu__burger"
+          href="./images/svgs/symbol-defs.svg#icon-burger"
+        ></use>
+      </svg>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <h2 class="preheader preheader--dark">A hair salon for men in Kyiv</h2>
+          <h1 class="header-main">BarberShop</h1>
+          <p class="hero__text">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+        </div>
+      </section>
+    </main>
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <svg class="mobile-menu__close" id="cross" width="40" height="40">
+        <use
+          href="./images/svgs/symbol-defs.svg#icon-close"
+        ></use>
+      </svg>
         <nav class="mobile-menu__navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -37,7 +59,7 @@
           <a href="tel:+380441111111" class="contacts__tel"
             >+38 044 111 11 11</a
           >
-          <button class="btn btn--light header__btn">онлайн-запись</button>
+          <button class="btn btn--light menu__btn">онлайн-запись</button>
         </div>
         <ul class="mobile-menu__socials">
           <li class="socials__item flexy">
@@ -58,25 +80,6 @@
           </li>
         </ul>
       </div>
-      <svg class="header__mobile-menu" width="40" height="40">
-        <use
-          class="mobile-menu__burger"
-          href="./images/svgs/symbol-defs.svg#icon-burger"
-        ></use>
-        <use
-          class="mobile-menu__close visually-hidden"
-          href="./images/svgs/symbol-defs.svg#icon-close"
-        ></use>
-      </svg>
-    </header>
-    <main>
-      <section class="hero">
-        <div class="container hero__container">
-          <h2 class="preheader preheader--dark"></h2>
-          <h1 class="header-main"></h1>
-          <p class="hero__text"></p>
-        </div>
-      </section>
-    </main>
+      <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
