@@ -4,7 +4,7 @@
       to top,
       $color-gradient-hero,
       $color-gradient-hero
-    ), url('../images/mobile/hero/slider-3.jpg');
+    ), url('../images/mobile/hero/slider-1.jpg');
   background-repeat: no-repeat;
   background-size: auto auto;
   padding-top: 208px;
@@ -12,6 +12,7 @@
 }
 
 .hero__container {
+  position: relative;
   padding-right: 143px;
 }
 
@@ -26,4 +27,28 @@
     color: $color-font-gray;
     @include font(16px, 1.63, 0.02em);
     font-weight: 400;
+}
+
+.slider {
+  position: absolute;
+  top: 63px;
+  right: 31px;
+  text-align: right;
+}
+
+.slider__item {
+  display: block;
+  height: 2px;
+}
+
+.slider__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.slider__bar {
+  fill: $color-font-gray;
+}
+
+.slider__bar--active {
+  fill: $color-white-main;
 }
