@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 2;
   transform: translateX(0);
   background-color: $color-white-main;
   padding: 118px 103px 227px 40px;
@@ -29,7 +30,7 @@
   margin-bottom: 24px;
 }
 
-.navigation__item:hover {
+.navigation__link:hover {
   color: $color-orange-main;
 }
 
