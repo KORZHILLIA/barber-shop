@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  overflow: hidden;
   background-image: linear-gradient(
       to top,
       $color-gradient-hero,
@@ -9,6 +10,12 @@
   background-size: auto auto;
   padding-top: 208px;
   padding-bottom: 183px;
+  transform: translateX(0);
+  transition: transform $transition;
+}
+
+.hero.slided {
+  transform: translateX(-100%);
 }
 
 .hero__container {
