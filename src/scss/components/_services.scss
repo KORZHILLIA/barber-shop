@@ -1,0 +1,55 @@
+.services {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    background-color: $color-bgc-services;
+    background-image: url('../images/mobile/services/img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services__header {
+    @include font(42px, 1.17, 0.05em);
+    color: $color-white-main;
+    margin-bottom: 44px;
+}
+
+.services__assort {
+    padding: 30px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(180deg, $color-gradient-services-top 0%, $color-gradient-services-bottom 100%);
+}
+
+.assort__item {
+    align-items: baseline;
+}
+
+.assort__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.assort__item::before {
+    content: '';
+    display: inline-block;
+    margin: 0 6px;
+    height: 1px;
+    color: $color-bar-services;
+    flex-grow: 1;
+    order: 2;
+}
+
+.assort__text {
+    @include font(14px, 2.14, 0.02em);
+    font-weight: 400;
+    color: $color-font-gray;
+}
+
+.assort__text--first {
+    order: 1;
+}
+
+.assort__text--second {
+    order: 3;
+}
+.services__btn {
+    margin: 0 auto;
+}

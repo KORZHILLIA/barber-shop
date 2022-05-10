@@ -33,9 +33,10 @@
     <main>
       <section class="hero">
         <div class="container hero__container">
-          <h2 class="preheader preheader--dark flexy">
+          <h2 class="visually-hidden">Hero Section</h2>
+          <h3 class="preheader preheader--dark flexy">
             A hair salon for men in Kyiv
-          </h2>
+          </h3>
           <h1 class="header-main">BarberShop</h1>
           <p class="hero__text">
             Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и
@@ -57,7 +58,12 @@
               </svg>
             </li>
             <li class="slider__item">
-              <svg class="slider__bar slider__bar--active" id="slider-small" width="8" height="2">
+              <svg
+                class="slider__bar slider__bar--active"
+                id="slider-small"
+                width="8"
+                height="2"
+              >
                 <use
                   href="./images/svgs/symbol-defs.svg#icon-slider-small"
                 ></use>
@@ -66,8 +72,74 @@
           </ul>
         </div>
         <div class="slider-box">
-          <img class="slider-box__img" src="./images/mobile/hero/slider-1.jpg" alt="slider-1">
+          <img
+            class="slider-box__img"
+            src="./images/mobile/hero/slider-1.jpg"
+            alt="slider-1"
+          />
         </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <h3 class="preheader preheader--light flexy">о нас</h3>
+          <h2 class="about__header section-header">
+            Лучший Барбершоп твоего города
+          </h2>
+          <p class="about__describer section-describer">
+            Если ты хочешь добавить в свой образ больше уверенности – тебе точно
+            к нам.
+          </p>
+          <p class="about__description section-describer">
+            Мы команда, которая никогда не останавливается на достигнутом и
+            жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
+            никогда не сможешь быть прежним. Мы команда, которая всегда с
+            клиентами "на одной волне". Поэтому, мы всегда готовы
+            усовершенствовать каждого, кто к нам приходит!
+          </p>
+          <button class="btn btn--light">онлайн-запись</button>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h3 class="preheader preheader--dark flexy">Проведи время в компании лучших мастеров</h3>
+          <h2 class="services__header section-header">Услуги и цены</h2>
+            <ul class="services__assort">
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Мужская стрижка</span>
+                <span class="assort__text assort__text--second">от 300 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Стрижка бороды</span>
+                <span class="assort__text assort__text--second">от 200 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Стрижка усов</span>
+                <span class="assort__text assort__text--second">от 200 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Бритье опасной бритвой</span>
+                <span class="assort__text assort__text--second">от 200 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Cтрижка у стажера</span>
+                <span class="assort__text assort__text--second">от 50 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Стрижка под насадку</span>
+                <span class="assort__text assort__text--second">от 200 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Детская стрижка (до 12 лет)</span>
+                <span class="assort__text assort__text--second">от 300 грн.</span>
+              </li>
+              <li class="assort__item flexy">
+                <span class="assort__text assort__text--first">Камуфлирование седины</span>
+                <span class="assort__text assort__text--second">от 200 грн.</span>
+              </li>
+            </ul>
+            <button class="services__btn btn btn--dark">онлайн-запись</button>
+        </div>
+      </section>
     </main>
     <div class="mobile-menu hidden" id="mobile-menu">
       <svg class="mobile-menu__close" id="cross" width="40" height="40">
