@@ -1,18 +1,19 @@
 body {
   font-family: $font-main;
   font-weight: 600;
+  color: $color-dark-main;
 }
 
 .container {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  
+
   @media screen and (min-width: 480px) {
     width: 480px;
     margin: 0 auto;
     padding-left: 31px;
-    padding-right: 31px;    
+    padding-right: 31px;
   }
 }
 
@@ -23,8 +24,8 @@ ul {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -32,9 +33,15 @@ button {
   padding: 0;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 .flexy {
@@ -43,6 +50,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .btn {
   font-family: inherit;
+  font-weight: inherit;
+  @include font(12px, 1.33, 0.09em);
+  text-transform: uppercase;
   display: block;
   min-width: 160px;
   max-width: 194px;
@@ -58,27 +68,49 @@ p, h1, h2, h3, h4, h5, h6 {
   color: inherit;
 }
 
+.btn--dark {
+  color: $color-white-main;
+}
+
 .preheader {
   align-items: center;
-    @include font(11px, 1.36, 0.1em);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-weight: inherit;
+  @include font(11px, 1.36, 0.1em);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: inherit;
 }
 
 .preheader--dark {
-    color: $color-font-preheader;
+  color: $color-font-preheader;
+}
+
+.preheader--light {
+  color: $color-dark-main;
 }
 
 .preheader--dark::before,
 .preheader--light::before {
-    content: '';
-    display: inline-block;
-    height: 1px;
-    width: 60px;
-    margin-right: 20px;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 60px;
+  margin-right: 20px;
 }
 
 .preheader--dark::before {
   background-color: $color-font-gray;
+}
+
+.preheader--light::before {
+  background-color: $color-dark-main;
+}
+
+.section-header {
+  font-weight: 700;
+  font-family: $font-support;
+}
+
+.section-describer {
+  font-weight: 400;
+  color: $color-font-describer;
 }

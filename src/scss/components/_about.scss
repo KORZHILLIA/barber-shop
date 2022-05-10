@@ -1,0 +1,20 @@
+.about {
+    padding-top: 84px;
+    padding-bottom: 84px;
+}
+
+.about__header {
+    max-width: 330px;
+    @include font(28px, 1.18, 0.05em);
+    margin-bottom: 20px;
+}
+
+.about__describer {
+    margin-bottom: 20px;
+    @include font(16px, 1.63, 0.02em);
+}
+
+.about__description {
+    margin-bottom: 40px;
+    @include font(14px, 1.86, 0.02em);
+}
