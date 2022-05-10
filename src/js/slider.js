@@ -1,17 +1,16 @@
 import { menu, timerId1 } from "./mobile-menu.js";
 
 const refs = {
-  hero: document.querySelector(".hero"),
+  heroSlider: document.querySelector(".slider-box__img"),
   sliderLarge: document.querySelector("#slider-large"),
   sliderMiddle: document.querySelector("#slider-middle"),
   sliderSmall: document.querySelector("#slider-small"),
 };
 
-const { hero, sliderLarge, sliderMiddle, sliderSmall } = refs;
-const isMenuHidden = menu.classList.contains('hidden');
+const { heroSlider, sliderLarge, sliderMiddle, sliderSmall } = refs;
 let i = 1;
 
-const timerId = setInterval(changeSliderImg, 2000);
+const timerId = setInterval(changeSliderImg, 3000);
 
 export function changeSliderImg() {
     const isMenuHidden = menu.classList.contains("hidden");
@@ -36,7 +35,8 @@ export function changeSliderImg() {
       break;
     }
     
-  let backgroundImage = `linear-gradient(to top, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url('./images/mobile/hero/slider-${i}.jpg')`;
-  hero.style.backgroundImage = backgroundImage;
+  let img = `./images/mobile/hero/slider-${i}.jpg`;
+  heroSlider.src = img;
+  heroSlider.alt = `slider-${i}`;
   i += 1;
 }

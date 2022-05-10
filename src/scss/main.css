@@ -5,6 +5,8 @@ body {
 
 .container {
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
@@ -135,10 +137,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .hero {
   position: relative;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url("../images/mobile/hero/slider-1.jpg");
-  background-image: linear-gradient(to top, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/mobile/hero/slider-1.jpg");
-  background-repeat: no-repeat;
-  background-size: auto auto;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2)));
+  background-image: linear-gradient(to top, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
   padding-top: 208px;
   padding-bottom: 183px;
 }
@@ -187,6 +188,34 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .slider__bar--active {
   fill: #fff;
+}
+
+.slider-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slider-box__img {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 500ms linear;
+  transition: -webkit-transform 500ms linear;
+  transition: transform 500ms linear;
+  transition: transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+.slider-box__img.slided-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.slider-box__img.slided-right {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .mobile-menu {
